@@ -37,10 +37,11 @@ export const projects: Project[] = [
     title: "PC Bottleneck Analyzer",
     description:
       "Hardware scanning tool that identifies performance bottlenecks in your PC build and provides AI-driven upgrade recommendations.",
-    tech: ["Electron", "TypeScript", "Node.js", "System APIs", "AI"],
+    tech: ["Next.js", "TypeScript", "Python", "Tailwind CSS", "Claude API"],
     category: "tool",
     featured: true,
     github: "https://github.com/kjhholt-alt/pc-bottleneck-analyzer",
+    demo: "https://pc-bottleneck-analyzer.vercel.app",
   },
   {
     id: "agent-mission-control",
