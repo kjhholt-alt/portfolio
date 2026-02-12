@@ -30,7 +30,7 @@ export const projects: Project[] = [
     category: "ai",
     featured: true,
     github: "https://github.com/kjhholt-alt/ai-chess-coach",
-    demo: "https://ai-chess-coach-gamma.vercel.app",
+    demo: "https://chess.buildkit.store",
   },
   {
     id: "pc-bottleneck-analyzer",
@@ -62,6 +62,17 @@ export const projects: Project[] = [
     featured: true,
     github: "https://github.com/kjhholt-alt/website-factory",
     demo: "https://demo.buildkit.store",
+  },
+  {
+    id: "stock-breakout-alerts",
+    title: "Stock Breakout Alerts",
+    description:
+      "Monitors Mag 7 stocks and indices for ATR consolidation patterns that precede breakouts. AI-powered analysis with real-time alerts and backtesting.",
+    tech: ["Django", "React", "TypeScript", "PostgreSQL", "Celery"],
+    category: "tool",
+    featured: true,
+    github: "https://github.com/kjhholt-alt/StockApp",
+    demo: "https://stock-app-rouge-nine.vercel.app",
   },
   {
     id: "gumroad-factory",
