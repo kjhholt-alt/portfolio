@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --surface: 255 255 255;
+    --surface-raised: 245 245 244;
+    --dot-color: rgba(0, 0, 0, 0.06);
+  }
+
+  .dark {
+    --surface: 24 24 27;
+    --surface-raised: 39 39 42;
+    --dot-color: rgba(255, 255, 255, 0.04);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-stone-50 text-stone-800 dark:bg-[#07070a] dark:text-zinc-300 font-body;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display font-bold text-stone-900 dark:text-zinc-50;
+  }
+
+  ::selection {
+    background: rgba(232, 160, 25, 0.25);
+  }
+}
+
+@layer components {
+  .dot-grid {
+    background-image: radial-gradient(
+      circle at 1px 1px,
+      var(--dot-color) 1px,
+      transparent 0
+    );
+    background-size: 28px 28px;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-dark via-accent to-accent-light;
+  }
+
+  .card {
+    @apply bg-white dark:bg-zinc-900/70 border border-stone-200 dark:border-zinc-800/80 rounded-2xl;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5;
+  }
+
+  .section-label {
+    @apply font-mono text-xs tracking-[0.2em] uppercase text-accent;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-accent text-zinc-950 font-display font-semibold
+           rounded-xl transition-all duration-200 hover:bg-accent-light hover:shadow-lg hover:shadow-accent/20
+           active:scale-[0.97];
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-6 py-3 border border-stone-300 dark:border-zinc-700
+           text-stone-700 dark:text-zinc-300 font-display font-semibold rounded-xl transition-all duration-200
+           hover:border-accent/50 hover:text-accent active:scale-[0.97];
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(161, 161, 170, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(161, 161, 170, 0.5);
+}
+
+/* Focus styles */
+*:focus-visible {
+  @apply outline-2 outline-offset-2 outline-accent;
+}
