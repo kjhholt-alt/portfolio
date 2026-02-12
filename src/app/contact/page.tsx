@@ -158,7 +158,7 @@ export default function ContactPage() {
                 </a>
 
                 <a
-                  href="mailto:hello@kruzholt.dev"
+                  href="mailto:kjh.holt@gmail.com"
                   className="flex items-center gap-3 p-3 rounded-xl border border-stone-200 dark:border-zinc-800
                              hover:border-accent/30 transition-colors group"
                 >
@@ -170,7 +170,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-sm font-medium group-hover:text-accent transition-colors">Email</p>
-                    <p className="text-xs text-stone-400 dark:text-zinc-600 font-mono">hello@kruzholt.dev</p>
+                    <p className="text-xs text-stone-400 dark:text-zinc-600 font-mono">kjh.holt@gmail.com</p>
                   </div>
                 </a>
               </div>

@@ -76,6 +76,11 @@ export default function RootLayout({
           <main className="min-h-screen">{children}</main>
           <Footer />
         </ThemeProvider>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){if(navigator.doNotTrack==="1")return;fetch("https://admin.buildkit.store/api/collect",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({site:"portfolio",path:location.pathname}),keepalive:true}).catch(function(){})})();`,
+          }}
+        />
       </body>
     </html>
   );
