@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/react";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -81,6 +82,7 @@ export default function RootLayout({
             __html: `(function(){if(navigator.doNotTrack==="1")return;fetch("https://admin.buildkit.store/api/collect",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({site:"portfolio",path:location.pathname}),keepalive:true}).catch(function(){})})();`,
           }}
         />
+        <Analytics />
       </body>
     </html>
   );
