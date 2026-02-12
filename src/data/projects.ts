@@ -51,14 +51,25 @@ export const projects: Project[] = [
     github: "https://github.com/kjhholt-alt/agent-mission-control",
   },
   {
-    id: "ai-website-factory",
-    title: "AI Website Factory",
+    id: "website-factory",
+    title: "Website Factory",
     description:
-      "Config-driven system for rapidly generating professional client websites. Define specs, let AI handle the build.",
-    tech: ["Next.js", "TypeScript", "AI/ML", "Tailwind CSS", "Vercel"],
+      "Config-driven website template system — one codebase, infinite client sites. Change a JSON config, entire site transforms.",
+    tech: ["Next.js", "TypeScript", "Prisma", "Tailwind CSS", "Vercel"],
     category: "web",
+    featured: true,
+    github: "https://github.com/kjhholt-alt/website-factory",
+    demo: "https://demo.buildkit.store",
+  },
+  {
+    id: "gumroad-factory",
+    title: "Gumroad Factory",
+    description:
+      "CLI toolchain for creating, validating, and packaging digital products for Gumroad. Includes templates, validation scripts, and automated ZIP packaging.",
+    tech: ["TypeScript", "Node.js", "Bash", "CLI"],
+    category: "tool",
     featured: false,
-    github: "https://github.com/kjhholt-alt/ai-website-factory",
+    github: "https://github.com/kjhholt-alt/gumroad-factory",
   },
 ];
 

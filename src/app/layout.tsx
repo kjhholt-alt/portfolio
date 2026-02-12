@@ -43,6 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
+    url: "https://buildkit.store",
     siteName: "Kruz Holt",
     title: "Kruz Holt — AI-Powered Solutions Developer",
     description:
