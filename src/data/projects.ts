@@ -15,10 +15,11 @@ export const projects: Project[] = [
     title: "AI Finance Brief",
     description:
       "AI-powered financial news summarization that distills market updates into concise, actionable briefings for traders and analysts.",
-    tech: ["Next.js", "TypeScript", "OpenAI API", "Python", "FastAPI"],
+    tech: ["Next.js", "TypeScript", "Claude API", "Tailwind CSS", "Vercel Cron"],
     category: "ai",
     featured: true,
     github: "https://github.com/kjhholt-alt/ai-finance-brief",
+    demo: "https://ai-finance-brief.vercel.app",
   },
   {
     id: "ai-chess-coach",
