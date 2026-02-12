@@ -30,6 +30,7 @@ export const projects: Project[] = [
     category: "ai",
     featured: true,
     github: "https://github.com/kjhholt-alt/ai-chess-coach",
+    demo: "https://ai-chess-coach-gamma.vercel.app",
   },
   {
     id: "pc-bottleneck-analyzer",
