@@ -12,6 +12,30 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "wow-weakauras-hub",
+    title: "WoW WeakAuras Hub",
+    description:
+      "Full-stack development platform for World of Warcraft WeakAuras. Create, store, and sync custom UI elements across characters with an intuitive web interface.",
+    tech: ["Django", "React", "TypeScript", "SQLite", "Tailwind CSS", "REST API"],
+    category: "web",
+    featured: true,
+    github: "https://github.com/kjhholt-alt/WoW",
+    demo: "http://localhost:5173", // Local demo - will be deployed
+    image: "/images/project-wow-weakauras.png",
+  },
+  {
+    id: "lead-generator-system",
+    title: "Lead Generator System",
+    description:
+      "Automated B2B lead generation system with website analysis, email campaigns, and CRM pipeline. Django REST API backend with React dashboard for 24/7 lead automation.",
+    tech: ["Django", "React", "TypeScript", "REST API", "Email Automation", "Website Analysis"],
+    category: "web",
+    featured: true,
+    github: "https://github.com/kjhholt-alt/lead-generator", // Will be pushed
+    demo: "http://localhost:5174", // Local demo - will be deployed
+    image: "/images/project-lead-generator.png",
+  },
+  {
     id: "ai-finance-brief",
     title: "AI Finance Brief",
     description:

@@ -4,7 +4,7 @@
 ## Quick Status
 - **Project:** Developer Portfolio
 - **Current session:** 1 of 1 (initial build complete)
-- **Last updated:** 2026-02-12
+- **Last updated:** 2026-02-13
 - **Overall health:** 🟢 Built and deployed to GitHub — production build passes clean
 
 ---
@@ -12,7 +12,7 @@
 ## What's Working
 - Homepage with hero section (animated name, tagline, CTA buttons, scroll indicator)
 - About blurb section with gradient text
-- Featured projects grid (4 cards, auto-pulled from data file)
+- Featured projects grid (6 cards, auto-pulled from data file) — **UPDATED 2026-02-13**
 - Tech stack showcase (10 tools in hover-interactive grid)
 - Hire me / contact CTA section
 - Projects page with filterable grid (AI/ML, Web Apps, Tools categories)
@@ -35,6 +35,11 @@
 - `next build` passes clean — all 7 routes (4 pages + 3 layouts + not-found)
 - Pushed to GitHub: github.com/kjhholt-alt/portfolio
 
+### New Projects Added (2026-02-13) ✅
+- **WoW WeakAuras Hub**: Full-stack platform for World of Warcraft UI development
+- **Lead Generator System**: Automated B2B lead generation with Django REST API
+- Both projects featured prominently with placeholder images (real screenshots needed)
+
 ## What's Broken / Incomplete
 - Contact form is client-side only (logs to console) — needs backend handler (Formspree, Resend, or API route)
 - Testimonials are placeholder content — need real client quotes
@@ -46,6 +51,23 @@
 ---
 
 ## Last Session Summary
+**Date:** 2026-02-13
+**Goal:** Update portfolio with new completed projects
+**What got done:**
+- Added WoW WeakAuras Hub project to portfolio data
+- Added Lead Generator System project to portfolio data  
+- Created placeholder images for both new projects
+- Updated featured projects count from 4 to 6 cards
+- Created screenshot capture guide for real project images
+- Verified dev server runs with new projects
+- Updated STATUS.md with project additions
+
+**What didn't get done (and why):**
+- Real project screenshots (need manual capture from running apps)
+- GitHub push (to be done next)
+- Vercel deployment update (after screenshots)
+
+## Previous Session Summary  
 **Date:** 2026-02-12
 **Goal:** Full portfolio site build from scratch
 **What got done:**
@@ -59,19 +81,9 @@
 - Production build verified — compiles in ~12s, 0 errors
 - Initialized git repo, pushed to github.com/kjhholt-alt/portfolio
 
-**What didn't get done (and why):**
-- Contact form backend (not in scope for session 1)
-- Vercel deployment (pivoting)
-- Real project screenshots (need to capture from live projects)
-
-**Bugs found:**
-- `npx create-next-app@latest` prompts for React Compiler even with all flags — had to scaffold manually
-- `gh` CLI installed at non-standard temp path, not on default PATH
-- Bash shell uses MSYS paths (`/c/Users/...`), Windows-style paths fail in cd commands
-
 **Decisions made:**
 - Syne font for display headings (geometric, bold, techy)
-- Outfit for body text (clean, modern)
+- Outfit for body text (clean, modern)  
 - JetBrains Mono for code-style labels
 - Warm amber/gold accent (#e8a019) — avoids generic blue/purple AI aesthetic
 - Dark mode default via next-themes class strategy
