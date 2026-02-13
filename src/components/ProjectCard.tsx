@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import type { Project } from "@/data/projects";
 
@@ -28,18 +29,30 @@ export function ProjectCard({ project, index = 0 }: { project: Project; index?: 
       }}
       className="group card card-hover flex flex-col"
     >
-      {/* Screenshot placeholder */}
+      {/* Project screenshot or placeholder */}
       <div className="relative h-48 rounded-t-2xl overflow-hidden bg-gradient-to-br from-stone-100 to-stone-200 dark:from-zinc-800 dark:to-zinc-900">
-        <div className="absolute inset-0 dot-grid opacity-60" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-5xl opacity-20 font-display group-hover:scale-110 transition-transform duration-500">
-            {categoryIcons[project.category] || "◆"}
-          </span>
-        </div>
+        {project.image ? (
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+            sizes="(max-width: 640px) 100vw, 50vw"
+          />
+        ) : (
+          <>
+            <div className="absolute inset-0 dot-grid opacity-60" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="text-5xl opacity-20 font-display group-hover:scale-110 transition-transform duration-500">
+                {categoryIcons[project.category] || "◆"}
+              </span>
+            </div>
+          </>
+        )}
         <div className="absolute top-3 left-3">
           <span
             className={`inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-mono font-medium
-                        rounded-md border ${categoryColors[project.category]}`}
+                        rounded-md border backdrop-blur-sm ${categoryColors[project.category]}`}
           >
             {project.category.toUpperCase()}
           </span>

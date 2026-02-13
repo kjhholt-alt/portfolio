@@ -7,6 +7,7 @@ export interface Project {
   featured: boolean;
   github?: string;
   demo?: string;
+  image?: string;
 }
 
 export const projects: Project[] = [
@@ -20,6 +21,7 @@ export const projects: Project[] = [
     featured: true,
     github: "https://github.com/kjhholt-alt/ai-finance-brief",
     demo: "https://ai-finance-brief.vercel.app",
+    image: "/images/project-ai-finance-brief.png",
   },
   {
     id: "ai-chess-coach",
@@ -31,6 +33,7 @@ export const projects: Project[] = [
     featured: true,
     github: "https://github.com/kjhholt-alt/ai-chess-coach",
     demo: "https://chess.buildkit.store",
+    image: "/images/project-ai-chess-coach.png",
   },
   {
     id: "pc-bottleneck-analyzer",
@@ -42,6 +45,7 @@ export const projects: Project[] = [
     featured: true,
     github: "https://github.com/kjhholt-alt/pc-bottleneck-analyzer",
     demo: "https://pc-bottleneck-analyzer.vercel.app",
+    image: "/images/project-pc-bottleneck.png",
   },
   {
     id: "agent-mission-control",
@@ -74,6 +78,7 @@ export const projects: Project[] = [
     featured: true,
     github: "https://github.com/kjhholt-alt/StockApp",
     demo: "https://stock-app-rouge-nine.vercel.app",
+    image: "/images/project-stock-alerts.png",
   },
   {
     id: "gumroad-factory",

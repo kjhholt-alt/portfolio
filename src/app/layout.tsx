@@ -25,6 +25,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://buildkit.store"),
   title: {
     default: "Kruz Holt — AI-Powered Solutions Developer",
     template: "%s | Kruz Holt",
@@ -49,12 +50,21 @@ export const metadata: Metadata = {
     title: "Kruz Holt — AI-Powered Solutions Developer",
     description:
       "Full-stack developer specializing in AI-powered applications, custom web development, and scalable client websites.",
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Kruz Holt — Full-Stack Developer & AI Engineer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Kruz Holt — AI-Powered Solutions Developer",
     description:
       "Full-stack developer specializing in AI-powered applications, custom web development, and scalable client websites.",
+    images: ["/images/twitter-banner.png"],
   },
   robots: {
     index: true,
