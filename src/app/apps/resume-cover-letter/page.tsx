@@ -6,7 +6,7 @@ export default function ResumeCoverLetterAppPage() {
       <div className="max-w-3xl mx-auto space-y-6">
         <div>
           <p className="section-label mb-2">{"// "}Resume & Cover Letter Generator</p>
-          <h1 className="text-3xl font-bold">Run The App Locally</h1>
+          <h1 className="text-3xl font-bold">Run The App On Your Machine</h1>
           <p className="text-muted mt-2">
             This app runs as a local Streamlit project. It keeps your resumes and
             job data on your machine.
@@ -16,7 +16,8 @@ export default function ResumeCoverLetterAppPage() {
         <div className="card space-y-3">
           <h2 className="text-xl font-semibold">Quick Start</h2>
           <pre className="code-block">
-{`cd C:\\Users\\Kruz\\Desktop\\Projects\\job-applications
+{`git clone https://github.com/kjhholt-alt/job-applications.git
+cd job-applications
 pip install -r requirements.txt
 streamlit run app.py`}
           </pre>
@@ -26,9 +27,18 @@ streamlit run app.py`}
           </p>
         </div>
 
+        <div className="card space-y-3">
+          <h2 className="text-xl font-semibold">What You Get</h2>
+          <ul className="text-sm text-muted space-y-2">
+            <li>Job matcher with Claude-powered fingerprints</li>
+            <li>One-click resume + cover letter drafts per role</li>
+            <li>All data stored locally on your machine</li>
+          </ul>
+        </div>
+
         <div className="flex flex-wrap gap-3">
           <Link className="btn-primary" href="https://github.com/kjhholt-alt/job-applications">
-            View on GitHub
+            Get The App
           </Link>
           <Link className="btn-outline" href="/projects">
             Back to Projects
