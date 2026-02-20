@@ -20,7 +20,7 @@ export const projects: Project[] = [
     category: "web",
     featured: true,
     github: "https://github.com/kjhholt-alt/WoW",
-    demo: "http://localhost:5173", // Local demo - will be deployed
+    // demo: Will add public demo URL when deployed
     image: "/images/project-wow-weakauras.png",
   },
   {
@@ -32,7 +32,7 @@ export const projects: Project[] = [
     category: "web",
     featured: true,
     github: "https://github.com/kjhholt-alt/lead-generator", // Will be pushed
-    demo: "http://localhost:5174", // Local demo - will be deployed
+    // demo: Will add public demo URL when deployed
     image: "/images/project-lead-generator.png",
   },
   {
@@ -46,6 +46,16 @@ export const projects: Project[] = [
     github: "https://github.com/kjhholt-alt/ai-finance-brief",
     demo: "https://ai-finance-brief.vercel.app",
     image: "/images/project-ai-finance-brief.png",
+  },
+  {
+    id: "resume-cover-letter-app",
+    title: "Resume & Cover Letter Generator",
+    description:
+      "Streamlit app that organizes job applications, matches roles to your interests, and generates tailored resumes and cover letters using Claude-powered job fingerprints.",
+    tech: ["Python", "Streamlit", "Claude API", "SQLite", "RSS Feeds"],
+    category: "tool",
+    featured: true,
+    github: "https://github.com/kjhholt-alt/job-applications",
   },
   {
     id: "ai-chess-coach",
