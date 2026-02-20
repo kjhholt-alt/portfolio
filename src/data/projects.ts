@@ -56,7 +56,7 @@ export const projects: Project[] = [
     category: "tool",
     featured: true,
     github: "https://github.com/kjhholt-alt/job-applications",
-    demo: "/apps/resume-cover-letter",
+    demo: "https://resume.buildkit.store",
     image: "/images/project-resume-cover-letter.png",
   },
   {

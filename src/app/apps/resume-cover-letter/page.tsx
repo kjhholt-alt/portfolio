@@ -6,15 +6,23 @@ export default function ResumeCoverLetterAppPage() {
       <div className="max-w-3xl mx-auto space-y-6">
         <div>
           <p className="section-label mb-2">{"// "}Resume & Cover Letter Generator</p>
-          <h1 className="text-3xl font-bold">Run The App On Your Machine</h1>
+          <h1 className="text-3xl font-bold">Resume & Cover Letter App</h1>
           <p className="text-muted mt-2">
-            This app runs as a local Streamlit project. It keeps your resumes and
-            job data on your machine.
+            Use the hosted app or run it locally. Data stays on your machine when
+            you run it locally.
           </p>
         </div>
 
         <div className="card space-y-3">
-          <h2 className="text-xl font-semibold">Quick Start</h2>
+          <h2 className="text-xl font-semibold">Hosted App</h2>
+          <p className="text-sm text-muted">
+            The hosted version is password protected and lives at
+            <code>resume.buildkit.store</code>.
+          </p>
+        </div>
+
+        <div className="card space-y-3">
+          <h2 className="text-xl font-semibold">Run Locally</h2>
           <pre className="code-block">
 {`git clone https://github.com/kjhholt-alt/job-applications.git
 cd job-applications
@@ -37,8 +45,11 @@ streamlit run app.py`}
         </div>
 
         <div className="flex flex-wrap gap-3">
-          <Link className="btn-primary" href="https://github.com/kjhholt-alt/job-applications">
-            Get The App
+          <Link className="btn-primary" href="https://resume.buildkit.store">
+            Open App
+          </Link>
+          <Link className="btn-outline" href="https://github.com/kjhholt-alt/job-applications">
+            View on GitHub
           </Link>
           <Link className="btn-outline" href="/projects">
             Back to Projects
