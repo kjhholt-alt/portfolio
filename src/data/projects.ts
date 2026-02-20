@@ -56,6 +56,7 @@ export const projects: Project[] = [
     category: "tool",
     featured: true,
     github: "https://github.com/kjhholt-alt/job-applications",
+    image: "/images/project-resume-cover-letter.png",
   },
   {
     id: "ai-chess-coach",
