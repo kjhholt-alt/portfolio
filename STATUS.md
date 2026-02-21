@@ -4,8 +4,8 @@
 ## Quick Status
 - **Project:** Developer Portfolio
 - **Current session:** 1 of 1 (initial build complete)
-- **Last updated:** 2026-02-13
-- **Overall health:** 🟢 Built and deployed to GitHub — production build passes clean
+- **Last updated:** 2026-02-14
+- **Overall health:** 🟢 DEPLOYED & LIVE — https://buildkit.store
 
 ---
 
@@ -45,7 +45,6 @@
 - Testimonials are placeholder content — need real client quotes
 - Project screenshot areas use geometric placeholder icons — need real images
 - No favicon or OG image
-- Not yet deployed to Vercel
 - No analytics setup
 
 ---
@@ -95,10 +94,10 @@
 ---
 
 ## Next Session Plan
-**Goal:** Vercel deployment + contact form backend + real images
-**Prompt to use:** "Deploy portfolio to Vercel, wire up contact form to Resend/Formspree, add real project screenshots"
-**Prerequisites:** Decide on email service (Resend recommended since ai-finance-brief already uses it)
-**Watch out for:** May need Vercel CLI or connect repo via Vercel dashboard
+**Goal:** Contact form backend + real project screenshots
+**Prompt to use:** "Wire up contact form to Resend, capture real screenshots from live projects for portfolio cards"
+**Prerequisites:** Resend API key (same one used by ai-finance-brief)
+**Watch out for:** Screenshots should be 16:9 ratio, captured from the live Vercel URLs
 
 ---
 
@@ -129,3 +128,5 @@
 | # | Date | Goal | Result | Notes |
 |---|------|------|--------|-------|
 | 1 | 2026-02-12 | Full portfolio site build | ✅ | 4 pages, 7 components, dark/light theme, animations, pushed to GitHub |
+| 2 | 2026-02-13 | Add new projects | ✅ | WoW WeakAuras Hub + Lead Generator System added |
+| 3 | 2026-02-14 | Deployment verified | ✅ | Live at buildkit.store (custom domain), STATUS.md updated |
