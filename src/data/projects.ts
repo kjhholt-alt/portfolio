@@ -80,7 +80,7 @@ export const projects: Project[] = [
     category: "tool",
     featured: true,
     github: "https://github.com/kjhholt-alt/pc-bottleneck-analyzer",
-    demo: "https://pc-bottleneck-analyzer.vercel.app",
+    demo: "https://pcbottleneck.buildkit.store",
     image: "/images/project-pc-bottleneck.png",
   },
   {
