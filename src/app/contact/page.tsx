@@ -7,11 +7,29 @@ export default function ContactPage() {
   const [formState, setFormState] = useState({ name: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
 
-  function handleSubmit(e: FormEvent) {
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
+
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault();
-    // Replace with your form handler (e.g., Formspree, API route, etc.)
-    console.log("Form submitted:", formState);
-    setSubmitted(true);
+    setSubmitting(true);
+    setError("");
+    try {
+      const res = await fetch("https://formsubmit.co/ajax/kjh.holt@gmail.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(formState),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setError("Something went wrong. Please try emailing me directly.");
+      }
+    } catch {
+      setError("Something went wrong. Please try emailing me directly.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -103,11 +121,17 @@ export default function ContactPage() {
                   />
                 </div>
 
-                <button type="submit" className="btn-primary w-full justify-center">
-                  Send Message
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
+                {error && (
+                  <p className="text-sm text-red-500">{error}</p>
+                )}
+
+                <button type="submit" disabled={submitting} className="btn-primary w-full justify-center disabled:opacity-50">
+                  {submitting ? "Sending..." : "Send Message"}
+                  {!submitting && (
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  )}
                 </button>
               </form>
             )}
