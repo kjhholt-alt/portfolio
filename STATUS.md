@@ -3,8 +3,8 @@
 
 ## Quick Status
 - **Project:** Developer Portfolio
-- **Current session:** 1 of 1 (initial build complete)
-- **Last updated:** 2026-02-14
+- **Current session:** 4 (websites page + contact form + deploy)
+- **Last updated:** 2026-03-04
 - **Overall health:** 🟢 DEPLOYED & LIVE — https://buildkit.store
 
 ---
@@ -41,11 +41,10 @@
 - Both projects featured prominently with placeholder images (real screenshots needed)
 
 ## What's Broken / Incomplete
-- Contact form is client-side only (logs to console) — needs backend handler (Formspree, Resend, or API route)
 - Testimonials are placeholder content — need real client quotes
 - Project screenshot areas use geometric placeholder icons — need real images
 - No favicon or OG image
-- No analytics setup
+- FormSubmit.co requires email verification on first submission (one-time — check kjh.holt@gmail.com inbox)
 
 ---
 
@@ -94,9 +93,9 @@
 ---
 
 ## Next Session Plan
-**Goal:** Contact form backend + real project screenshots
-**Prompt to use:** "Wire up contact form to Resend, capture real screenshots from live projects for portfolio cards"
-**Prerequisites:** Resend API key (same one used by ai-finance-brief)
+**Goal:** Real project screenshots + testimonials + favicon
+**Prompt to use:** "Capture real screenshots from live projects for portfolio cards, add favicon and OG image"
+**Prerequisites:** None
 **Watch out for:** Screenshots should be 16:9 ratio, captured from the live Vercel URLs
 
 ---
@@ -130,3 +129,4 @@
 | 1 | 2026-02-12 | Full portfolio site build | ✅ | 4 pages, 7 components, dark/light theme, animations, pushed to GitHub |
 | 2 | 2026-02-13 | Add new projects | ✅ | WoW WeakAuras Hub + Lead Generator System added |
 | 3 | 2026-02-14 | Deployment verified | ✅ | Live at buildkit.store (custom domain), STATUS.md updated |
+| 4 | 2026-03-04 | Websites page + contact form + deploy | ✅ | New /websites sales page (3 packages), contact form via FormSubmit.co, nav updated, redeployed to Vercel |
