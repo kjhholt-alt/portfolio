@@ -12,6 +12,16 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "buildforge-poe2",
+    title: "BuildForge (PoE2)",
+    description:
+      "Paste a Path of Building 2 export and get a clean, level-ordered Path of Exile 2 leveling guide, a one-tap .build file, and a shareable link — all in the browser, no account, no backend.",
+    tech: ["JavaScript", "PoB2 codec", "Vercel", "Zero-backend"],
+    category: "tool",
+    featured: true,
+    demo: "https://buildforge.buildkit.store",
+  },
+  {
     id: "wow-weakauras-hub",
     title: "WoW WeakAuras Hub",
     description:
