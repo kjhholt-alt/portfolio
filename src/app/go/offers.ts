@@ -6,11 +6,13 @@
  * place the storefront + affiliate tag live, so flipping either updates
  * every link in every live video instantly — no video edits, no quota.
  *
- * REVENUE FLIP (Kruz gate): set IGR to the referral tag from the Instant
- * Gaming affiliate dashboard (instant-gaming.com/en/partnership/). Empty tag
- * = links are honest store links that earn nothing yet.
+ * REVENUE FLIP: set IGR to the referral tag from the Instant Gaming
+ * affiliate dashboard (instant-gaming.com/en/partnership/). Empty tag =
+ * links are honest store links that earn nothing yet.
+ *
+ * LIVE 2026-07-03 — Kruz's Instant Gaming affiliate tag (3% per sale).
  */
-export const IGR = "";
+export const IGR = "freegames4u";
 
 const IG = "https://www.instant-gaming.com/en";
 
