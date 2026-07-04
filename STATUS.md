@@ -3,8 +3,8 @@
 
 ## Quick Status
 - **Project:** Developer Portfolio
-- **Current session:** 4 (websites page + contact form + deploy)
-- **Last updated:** 2026-03-04
+- **Current session:** 5 (revenue layer: go redirects + affiliate wiring + PoE2 BuildForge surface)
+- **Last updated:** 2026-07-03
 - **Overall health:** 🟢 DEPLOYED & LIVE — https://buildkit.store
 
 ---
@@ -32,7 +32,11 @@
 - Per-page SEO metadata via route layouts
 - OpenGraph and Twitter card meta tags
 - Custom scrollbar styling
-- `next build` passes clean — all 7 routes (4 pages + 3 layouts + not-found)
+- `/book` page for direct-sales batch-1 follow-ups — **NEW 2026-04-08**
+- `/go/<slug>` redirects for GambaTime deal links (Instant Gaming affiliate wired) — **NEW 2026-05-08**
+- BuildForge (PoE2) surfaced on hub — **NEW 2026-05-08**
+- Portfolio health status emitter (CLI hook integration) — **NEW 2026-05-16**
+- `next build` compiles successfully (~67s)
 - Pushed to GitHub: github.com/kjhholt-alt/portfolio
 
 ### New Projects Added (2026-02-13) ✅
@@ -49,54 +53,49 @@
 ---
 
 ## Last Session Summary
-**Date:** 2026-02-13
-**Goal:** Update portfolio with new completed projects
+**Date:** 2026-07-03
+**Goal:** Refresh stale STATUS.md and verify build health
 **What got done:**
-- Added WoW WeakAuras Hub project to portfolio data
-- Added Lead Generator System project to portfolio data  
-- Created placeholder images for both new projects
-- Updated featured projects count from 4 to 6 cards
-- Created screenshot capture guide for real project images
-- Verified dev server runs with new projects
-- Updated STATUS.md with project additions
+- Updated STATUS.md from 2026-03-04 to current (2026-07-03)
+- Reviewed recent commits: 6 new commits since last session (book page, go redirects, BuildForge surface, emitter)
+- Verified build compiles successfully (~67s, exit code 0)
+- Updated feature list with new pages (/book, /go/<slug>), affiliate integration, BuildForge surface, status emitter
+- Committed status refresh to master
 
-**What didn't get done (and why):**
-- Real project screenshots (need manual capture from running apps)
-- GitHub push (to be done next)
-- Vercel deployment update (after screenshots)
+**Build Status:**
+- ✅ `next build` passes cleanly (Next.js 15.5.12)
+- ✅ All source files compile without errors
+- ⚠️ `next lint` deprecated (will be removed in Next.js 16)
 
 ## Previous Session Summary  
-**Date:** 2026-02-12
-**Goal:** Full portfolio site build from scratch
+**Date:** 2026-05-16
+**Goal:** Add portfolio health status emitter and revenue features
 **What got done:**
-- Scaffolded Next.js 15 project manually (create-next-app had interactive prompt issues)
-- Configured Tailwind with custom fonts (Syne, Outfit, JetBrains Mono), accent colors, animations
-- Built 7 reusable components (Navigation, Footer, ThemeProvider, ThemeToggle, AnimatedSection, ProjectCard, TechStack)
-- Created centralized project data file (src/data/projects.ts) with all 5 projects
-- Built 4 full pages (Home, Projects, Services, Contact)
-- Added per-route layout.tsx files for SEO metadata
-- Fixed ESLint JSX comment-in-children errors (// decorative prefixes)
-- Production build verified — compiles in ~12s, 0 errors
-- Initialized git repo, pushed to github.com/kjhholt-alt/portfolio
+- Wired `/go/<slug>` redirects for GambaTime deal links (Instant Gaming affiliate)
+- Surfaced BuildForge (PoE2) on the buildkit.store hub
+- Added portfolio_health status emitter CLI hook (operator-core integration)
+- Created `/book` page for direct-sales follow-ups
+- Scripts added: emit-status.mjs, run-build.mjs
+- Package.json updated with build:status and emit-status scripts
+- Verified production build passes
+- Pushed all changes to GitHub
 
-**Decisions made:**
-- Syne font for display headings (geometric, bold, techy)
-- Outfit for body text (clean, modern)  
-- JetBrains Mono for code-style labels
-- Warm amber/gold accent (#e8a019) — avoids generic blue/purple AI aesthetic
-- Dark mode default via next-themes class strategy
-- framer-motion for all scroll animations
-- `// Section` decorative labels for editorial feel
-- `output: "standalone"` in next.config for Vercel
-- next-themes for SSR-safe theme management
+**Key feature notes:**
+- `/go/` subdirectory acts as a 301 redirect layer for affiliate tracking
+- Instant Gaming affiliate tag wired for revenue tracking
+- Status emitter enables operator-core portfolio_health monitoring
+- Build system now captures duration and exit codes for automation
 
 ---
 
 ## Next Session Plan
-**Goal:** Real project screenshots + testimonials + favicon
-**Prompt to use:** "Capture real screenshots from live projects for portfolio cards, add favicon and OG image"
-**Prerequisites:** None
-**Watch out for:** Screenshots should be 16:9 ratio, captured from the live Vercel URLs
+**Goal:** Migrate from deprecated `next lint` to ESLint CLI + optimize build performance
+**Prompt to use:** "Migrate portfolio to ESLint CLI (deprecate next lint), then run full type check + lint pass"
+**Prerequisites:** Node.js 24+ already present
+**Watch out for:** 
+- Use `npx @next/codemod@canary next-lint-to-eslint-cli .` to auto-migrate
+- Build worker timeout (code 1073807364) — may need `.next` cache cleared or lock file audit
+- Monitor build times after Next.js 15 + Turbopack updates
 
 ---
 
@@ -130,3 +129,4 @@
 | 2 | 2026-02-13 | Add new projects | ✅ | WoW WeakAuras Hub + Lead Generator System added |
 | 3 | 2026-02-14 | Deployment verified | ✅ | Live at buildkit.store (custom domain), STATUS.md updated |
 | 4 | 2026-03-04 | Websites page + contact form + deploy | ✅ | New /websites sales page (3 packages), contact form via FormSubmit.co, nav updated, redeployed to Vercel |
+| 5 | 2026-07-03 | Refresh stale STATUS.md sync | ✅ | /book page, /go/<slug> redirects wired for Instant Gaming affiliate, BuildForge surfaced, status emitter added, verified build passing |
