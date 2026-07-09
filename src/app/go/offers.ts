@@ -52,8 +52,9 @@ export const OFFERS: Record<string, string> = {
   halo: "halo",
 };
 
-/** Resolve a slug to its storefront URL, affiliate-tagged when IGR is set.
- *  Unknown slugs (incl. the catch-all "deals") land on the IG homepage. */
+/** Resolve a game slug to its storefront URL, affiliate-tagged when IGR is set.
+ *  Unknown game slugs land on the IG homepage. The generic `deals` slug is
+ *  intercepted by the route and sent to our owned /deals hub. */
 export function targetFor(slug: string): string {
   const q = OFFERS[slug];
   const base = q ? `${IG}/search/?query=${encodeURIComponent(q)}` : `${IG}/`;

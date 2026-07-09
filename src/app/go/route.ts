@@ -1,12 +1,9 @@
-import { NextResponse } from "next/server";
-
-import { targetFor } from "./offers";
+import { type NextRequest, NextResponse } from "next/server";
 
 export const dynamic = "force-dynamic";
 
-/** Bare buildkit.store/go -> the catch-all deals target. */
-export async function GET() {
-  const target = targetFor("deals");
-  console.log(`[go] slug=deals -> ${target}`);
-  return NextResponse.redirect(target, 302);
+/** Bare buildkit.store/go -> the owned deals hub. */
+export async function GET(req: NextRequest) {
+  console.log("[go] slug=deals -> /deals");
+  return NextResponse.redirect(new URL("/deals", req.url), 302);
 }

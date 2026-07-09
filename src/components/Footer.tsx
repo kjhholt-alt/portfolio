@@ -21,6 +21,12 @@ export function Footer() {
 
           {/* Links */}
           <div className="flex items-center gap-6">
+            <Link
+              href="/deals"
+              className="text-sm font-medium text-stone-500 dark:text-zinc-500 hover:text-accent transition-colors"
+            >
+              Game deals
+            </Link>
             <a
               href="https://github.com/kjhholt-alt"
               target="_blank"
