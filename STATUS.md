@@ -3,8 +3,8 @@
 
 ## Quick Status
 - **Project:** Developer Portfolio
-- **Current session:** 5 (revenue layer: go redirects + affiliate wiring + PoE2 BuildForge surface)
-- **Last updated:** 2026-07-03
+- **Current session:** 6 (GambaTime Deals Hub first-dollar funnel)
+- **Last updated:** 2026-07-09
 - **Overall health:** 🟢 DEPLOYED & LIVE — https://buildkit.store
 
 ---
@@ -34,6 +34,9 @@
 - Custom scrollbar styling
 - `/book` page for direct-sales batch-1 follow-ups — **NEW 2026-04-08**
 - `/go/<slug>` redirects for GambaTime deal links (Instant Gaming affiliate wired) — **NEW 2026-05-08**
+- `/deals` mobile-first GambaTime game discovery hub with eight curated titles, search, category filters, and disclosed affiliate CTAs — **NEW 2026-07-09**
+- Affiliate redirect attribution persists `/go/click/<slug>?src=...` events without delaying the buyer — **NEW 2026-07-09**
+- GambaTime's public YouTube About description now links to `/go/deals` with an affiliate disclosure — **LIVE 2026-07-09**
 - BuildForge (PoE2) surfaced on hub — **NEW 2026-05-08**
 - Portfolio health status emitter (CLI hook integration) — **NEW 2026-05-16**
 - `next build` compiles successfully (~67s)
@@ -53,6 +56,30 @@
 ---
 
 ## Last Session Summary
+**Date:** 2026-07-09
+**Goal:** Put one first-dollar revenue funnel in production using an audience and affiliate account that already exist
+**What got done:**
+- Shipped `https://buildkit.store/deals` as an owned, mobile-first GambaTime Deals Hub
+- Added eight game cards backed by official Steam artwork and tagged Instant Gaming search destinations
+- Kept the approved `freegames4u` affiliate tag on every outbound storefront redirect
+- Added fail-open server-side click attribution with source and optional video identifiers
+- Changed `/go` and `/go/deals` from storefront redirects into entry points for the owned hub
+- Published the hub link and affiliate disclosure in the GambaTime YouTube channel description
+- Deployed production and verified the public page, redirects, images, disclosure, and channel metadata
+
+**Verification:**
+- `npm run test:deals` — 4/4 pass
+- `npx tsc --noEmit` — pass
+- `npm run build` — pass
+- Production `/deals` — HTTP 200 with eight tagged deal links
+- Public YouTube About page — HTTP 200 and contains the hub URL plus disclosure
+
+**Revenue checkpoint:**
+- Review `/go/click/<slug>` events after seven days; prioritize the games that earn clicks before expanding the catalog
+- Treat affiliate-network commissions as the conversion source of truth
+
+---
+
 **Date:** 2026-07-03
 **Goal:** Refresh stale STATUS.md and verify build health
 **What got done:**
