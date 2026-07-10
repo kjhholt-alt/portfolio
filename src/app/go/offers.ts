@@ -52,6 +52,12 @@ export const OFFERS: Record<string, string> = {
   halo: "halo",
 };
 
+/** Keep attribution bounded and safe for logs, URLs, and the collector path. */
+export function sourceTag(value: string | null): string | undefined {
+  const source = value?.replace(/[^a-z0-9_-]/gi, "").slice(0, 40);
+  return source || undefined;
+}
+
 /** Resolve a game slug to its storefront URL, affiliate-tagged when IGR is set.
  *  Unknown game slugs land on the IG homepage. The generic `deals` slug is
  *  intercepted by the route and sent to our owned /deals hub. */

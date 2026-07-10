@@ -1,6 +1,6 @@
 import { after, NextRequest, NextResponse } from "next/server";
 
-import { targetFor } from "../offers";
+import { sourceTag, targetFor } from "../offers";
 
 export const dynamic = "force-dynamic";
 
@@ -34,14 +34,15 @@ export async function GET(
   { params }: { params: Promise<{ slug: string }> },
 ) {
   const { slug } = await params;
-  if (slug === "deals") {
-    console.log("[go] slug=deals -> /deals");
-    return NextResponse.redirect(new URL("/deals", req.url), 302);
-  }
   const v = req.nextUrl.searchParams.get("v");
-  const source = req.nextUrl.searchParams.get("src")
-    ?.replace(/[^a-z0-9_-]/gi, "")
-    .slice(0, 40);
+  const source = sourceTag(req.nextUrl.searchParams.get("src"));
+  if (slug === "deals") {
+    const hub = new URL("/deals", req.url);
+    if (source) hub.searchParams.set("src", source);
+    recordAffiliateRedirect(slug, v, source);
+    console.log(`[go] slug=deals${source ? ` src=${source}` : ""} -> /deals`);
+    return NextResponse.redirect(hub, 302);
+  }
   const target = targetFor(slug);
   recordAffiliateRedirect(slug, v, source);
   console.log(

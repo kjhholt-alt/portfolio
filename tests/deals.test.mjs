@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 
 import { filterGameDeals, GAME_DEALS } from "../src/app/deals/catalog.ts";
-import { IGR, OFFERS, targetFor } from "../src/app/go/offers.ts";
+import { IGR, OFFERS, sourceTag, targetFor } from "../src/app/go/offers.ts";
 
 test("every deal card resolves through a configured affiliate offer", () => {
   assert.ok(GAME_DEALS.length >= 8);
@@ -27,6 +27,13 @@ test("unknown game slugs still fail over to the tagged storefront", () => {
   const target = new URL(targetFor("not-in-the-map"));
   assert.equal(target.pathname, "/en/");
   assert.equal(target.searchParams.get("igr"), IGR);
+});
+
+test("referral sources are bounded before entering click receipts", () => {
+  assert.equal(sourceTag("buildkit-play_nav!?"), "buildkit-play_nav");
+  assert.equal(sourceTag("x".repeat(60)), "x".repeat(40));
+  assert.equal(sourceTag("!!!"), undefined);
+  assert.equal(sourceTag(null), undefined);
 });
 
 test("deal search and category filters compose", () => {
