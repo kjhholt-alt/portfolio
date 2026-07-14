@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>BuildKit — Site direction study</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="review.css">
+</head>
+<body>
+  <header class="review-bar">
+    <div class="review-brand"><span>B/01</span><div><strong>BuildKit</strong><small>Homepage direction study</small></div></div>
+    <nav class="direction-tabs" aria-label="Site directions">
+      <button class="is-active" data-direction="journal" type="button">
+        <i>01</i><span><strong>Field Journal</strong><small>Newsreader · warm ink · editorial</small></span><em><b style="--c:#0d0e0d"></b><b style="--c:#8d9a8f"></b><b style="--c:#e7e2d7"></b></em>
+      </button>
+      <button data-direction="ledger" type="button">
+        <i>02</i><span><strong>Proof Ledger</strong><small>IBM Plex · parchment · structured</small></span><em><b style="--c:#d8d3c8"></b><b style="--c:#8a5545"></b><b style="--c:#1d1e1b"></b></em>
+      </button>
+      <button data-direction="monograph" type="button">
+        <i>03</i><span><strong>Studio Monograph</strong><small>Manrope · deep mineral · product-led</small></span><em><b style="--c:#0b1014"></b><b style="--c:#9d7967"></b><b style="--c:#dce3e5"></b></em>
+      </button>
+    </nav>
+    <div class="review-actions">
+      <div class="viewport-switch" role="group" aria-label="Preview width"><button class="is-active" data-viewport="desktop" type="button">Desktop</button><button data-viewport="mobile" type="button">Mobile</button></div>
+      <a id="openPage" href="site.html?dir=journal" target="_blank" rel="noreferrer">Open <svg aria-hidden="true" viewBox="0 0 18 18"><path d="M7 4h7v7M14 4 8 10M12 14H4V6"/></svg></a>
+    </div>
+  </header>
+
+  <section class="direction-note"><strong id="directionTitle">Field Journal</strong><span id="directionNote">A dark editorial studio page that makes the work feel considered, human, and real.</span><span class="direction-note__keys">Keys <kbd>1</kbd>–<kbd>3</kbd> switch directions</span></section>
+
+  <main class="review-stage" id="reviewStage" data-viewport="desktop">
+    <iframe id="siteFrame" title="BuildKit homepage direction" src="site.html?dir=journal"></iframe>
+  </main>
+
+  <script src="review.js"></script>
+</body>
+</html>
