@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>BuildKit — Premium Field Journal review</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wdth,wght@75..100,400..700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="review.css">
+</head>
+<body>
+  <header class="review-header">
+    <div class="review-brand"><span>BK</span><div><strong>BuildKit / Field Journal</strong><small>Premium direction · review 01</small></div></div>
+    <div class="review-controls" role="group" aria-label="Preview size">
+      <button class="is-active" type="button" data-view="desktop"><span>Desktop</span><small>D</small></button>
+      <button type="button" data-view="mobile"><span>Mobile</span><small>M</small></button>
+      <button type="button" data-notes><span>Notes</span><small>N</small></button>
+    </div>
+    <a class="open-site" href="site.html" target="_blank">Open clean site <span>↗</span></a>
+  </header>
+
+  <main class="review-stage" data-view="desktop">
+    <section class="preview-column">
+      <div class="preview-meta"><span id="viewportLabel">Responsive desktop / fit to window</span><span>Scroll inside the preview</span></div>
+      <div class="browser-frame">
+        <div class="browser-bar"><span><i></i><i></i><i></i></span><p>buildkit.store / premium field journal</p><b>Prototype</b></div>
+        <div class="iframe-wrap"><iframe id="sitePreview" src="site.html" title="Premium Field Journal website prototype"></iframe></div>
+      </div>
+    </section>
+
+    <aside class="review-notes" id="reviewNotes">
+      <header><span>DESIGN DECISIONS / 01</span><button type="button" data-close-notes aria-label="Close notes">×</button></header>
+      <div class="notes-intro"><p>Field Journal, made quieter and more expensive.</p><span>The premium signal comes from scale, rhythm, materials, and proof—not shine.</span></div>
+      <ol>
+        <li><span>01</span><div><strong>Editorial scale</strong><p>The Newsreader display face now has enough room to feel intentional. Instrument Sans carries every functional detail at a readable size.</p></div></li>
+        <li><span>02</span><div><strong>Ink + brass</strong><p>Near-black paper, warm bone text, aged brass, and quiet sage. No bright neon and no gradient headline.</p></div></li>
+        <li><span>03</span><div><strong>Commissioned proof</strong><p>Each case gets a bespoke product artifact and a constraint → response narrative instead of a generic card.</p></div></li>
+        <li><span>04</span><div><strong>Ultra-wide aware</strong><p>The canvas grows to 1,980px with larger reading sizes on wide displays, while keeping line lengths controlled.</p></div></li>
+        <li><span>05</span><div><strong>Quiet motion</strong><p>Scroll reveals and progress are restrained, optional, and fully removed for reduced-motion users.</p></div></li>
+      </ol>
+      <footer><p><span></span>Ready for direction review</p><small>Next gate: translate to production Next.js</small></footer>
+    </aside>
+  </main>
+
+  <script src="review.js"></script>
+</body>
+</html>
