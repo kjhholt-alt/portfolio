@@ -2,6 +2,17 @@
 
 This is the selected Field Journal direction developed into a dedicated, responsive homepage prototype. It is intentionally isolated from the production Next.js application until the direction is approved.
 
+## Figma source
+
+The editable design system and finished screens live in the [BuildKit Field Journal Figma file](https://www.figma.com/design/aN8YUZffeq1Y6e8IX8cgvN).
+
+- Desktop homepage: node `31:2` at 1,920px
+- Mobile homepage: node `43:2` at 390px
+- Foundations: 66 local variables, 20 text styles, and 4 effect styles
+- Reusable system: desktop and mobile headers, buttons, folios, availability marks, product artifacts, field notes, case studies, and method rows
+
+`figma-state.json` is the durable node and token ledger. Temporary HTML capture frames are removed after comparison; the committed capture hook remains available for future code-to-design refreshes.
+
 ## Review
 
 Open `index.html` for the framed desktop/mobile review. Open `site.html` for the clean page.

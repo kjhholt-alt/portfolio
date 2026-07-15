@@ -342,6 +342,7 @@ svg { display: block; fill: none; stroke: currentColor; stroke-linecap: round; s
 .reveal { opacity: 1; transform: none; }
 .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .75s var(--ease), transform .75s var(--ease); }
 .js .reveal.is-visible { opacity: 1; transform: translateY(0); }
+.figma-capture .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
 
 @media (min-width: 2100px) {
   :root { --shell: 1980px; }

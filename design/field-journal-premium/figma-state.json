@@ -1,0 +1,550 @@
+{
+  "schemaVersion": 1,
+  "runId": "buildkit-field-journal-20260715",
+  "fileKey": "aN8YUZffeq1Y6e8IX8cgvN",
+  "fileUrl": "https://www.figma.com/design/aN8YUZffeq1Y6e8IX8cgvN",
+  "source": "design/field-journal-premium",
+  "phase": "screens-verified",
+  "collections": {
+    "collection/color-primitives": {
+      "id": "VariableCollectionId:2:2",
+      "name": "BuildKit / Color Primitives",
+      "mode": "Value"
+    },
+    "collection/color": {
+      "id": "VariableCollectionId:2:3",
+      "name": "BuildKit / Color",
+      "mode": "Dark"
+    },
+    "collection/spacing": {
+      "id": "VariableCollectionId:2:4",
+      "name": "BuildKit / Spacing",
+      "mode": "Value"
+    },
+    "collection/radius": {
+      "id": "VariableCollectionId:2:5",
+      "name": "BuildKit / Radius",
+      "mode": "Value"
+    },
+    "collection/typography": {
+      "id": "VariableCollectionId:2:6",
+      "name": "BuildKit / Typography",
+      "mode": "Value"
+    }
+  },
+  "variables": {
+    "primitive/paper/deep": {
+      "id": "VariableID:2:7",
+      "name": "paper/deep"
+    },
+    "primitive/paper/base": {
+      "id": "VariableID:2:8",
+      "name": "paper/base"
+    },
+    "primitive/paper/raised": {
+      "id": "VariableID:2:9",
+      "name": "paper/raised"
+    },
+    "primitive/paper/soft": {
+      "id": "VariableID:2:10",
+      "name": "paper/soft"
+    },
+    "primitive/paper/hover": {
+      "id": "VariableID:2:11",
+      "name": "paper/hover"
+    },
+    "primitive/ink/base": {
+      "id": "VariableID:2:12",
+      "name": "ink/base"
+    },
+    "primitive/ink/soft": {
+      "id": "VariableID:2:13",
+      "name": "ink/soft"
+    },
+    "primitive/ink/muted": {
+      "id": "VariableID:2:14",
+      "name": "ink/muted"
+    },
+    "primitive/ink/faint": {
+      "id": "VariableID:2:15",
+      "name": "ink/faint"
+    },
+    "primitive/overlay/line": {
+      "id": "VariableID:2:16",
+      "name": "overlay/line"
+    },
+    "primitive/overlay/line-soft": {
+      "id": "VariableID:2:17",
+      "name": "overlay/line-soft"
+    },
+    "primitive/overlay/line-strong": {
+      "id": "VariableID:2:18",
+      "name": "overlay/line-strong"
+    },
+    "primitive/brass/base": {
+      "id": "VariableID:2:19",
+      "name": "brass/base"
+    },
+    "primitive/brass/bright": {
+      "id": "VariableID:2:20",
+      "name": "brass/bright"
+    },
+    "primitive/brass/ink": {
+      "id": "VariableID:2:21",
+      "name": "brass/ink"
+    },
+    "primitive/brass/wash": {
+      "id": "VariableID:2:22",
+      "name": "brass/wash"
+    },
+    "primitive/sage/base": {
+      "id": "VariableID:2:23",
+      "name": "sage/base"
+    },
+    "primitive/sage/bright": {
+      "id": "VariableID:2:24",
+      "name": "sage/bright"
+    },
+    "primitive/sage/wash": {
+      "id": "VariableID:2:25",
+      "name": "sage/wash"
+    },
+    "primitive/rust/base": {
+      "id": "VariableID:2:26",
+      "name": "rust/base"
+    },
+    "primitive/black/base": {
+      "id": "VariableID:2:27",
+      "name": "black/base"
+    },
+    "semantic/color/background/canvas": {
+      "id": "VariableID:2:28",
+      "name": "color/background/canvas"
+    },
+    "semantic/color/background/deep": {
+      "id": "VariableID:2:29",
+      "name": "color/background/deep"
+    },
+    "semantic/color/background/raised": {
+      "id": "VariableID:2:30",
+      "name": "color/background/raised"
+    },
+    "semantic/color/background/soft": {
+      "id": "VariableID:2:31",
+      "name": "color/background/soft"
+    },
+    "semantic/color/background/hover": {
+      "id": "VariableID:2:32",
+      "name": "color/background/hover"
+    },
+    "semantic/color/text/primary": {
+      "id": "VariableID:2:33",
+      "name": "color/text/primary"
+    },
+    "semantic/color/text/secondary": {
+      "id": "VariableID:2:34",
+      "name": "color/text/secondary"
+    },
+    "semantic/color/text/muted": {
+      "id": "VariableID:2:35",
+      "name": "color/text/muted"
+    },
+    "semantic/color/text/faint": {
+      "id": "VariableID:2:36",
+      "name": "color/text/faint"
+    },
+    "semantic/color/border/default": {
+      "id": "VariableID:2:37",
+      "name": "color/border/default"
+    },
+    "semantic/color/border/subtle": {
+      "id": "VariableID:2:38",
+      "name": "color/border/subtle"
+    },
+    "semantic/color/border/strong": {
+      "id": "VariableID:2:39",
+      "name": "color/border/strong"
+    },
+    "semantic/color/accent/default": {
+      "id": "VariableID:2:40",
+      "name": "color/accent/default"
+    },
+    "semantic/color/accent/strong": {
+      "id": "VariableID:2:41",
+      "name": "color/accent/strong"
+    },
+    "semantic/color/accent/on-accent": {
+      "id": "VariableID:2:42",
+      "name": "color/accent/on-accent"
+    },
+    "semantic/color/accent/wash": {
+      "id": "VariableID:2:43",
+      "name": "color/accent/wash"
+    },
+    "semantic/color/status/success": {
+      "id": "VariableID:2:44",
+      "name": "color/status/success"
+    },
+    "semantic/color/status/success-strong": {
+      "id": "VariableID:2:45",
+      "name": "color/status/success-strong"
+    },
+    "semantic/color/status/success-wash": {
+      "id": "VariableID:2:46",
+      "name": "color/status/success-wash"
+    },
+    "semantic/color/status/warm": {
+      "id": "VariableID:2:47",
+      "name": "color/status/warm"
+    },
+    "semantic/color/icon/primary": {
+      "id": "VariableID:2:48",
+      "name": "color/icon/primary"
+    },
+    "semantic/color/icon/muted": {
+      "id": "VariableID:2:49",
+      "name": "color/icon/muted"
+    },
+    "semantic/color/icon/accent": {
+      "id": "VariableID:2:50",
+      "name": "color/icon/accent"
+    },
+    "spacing/space/04": {
+      "id": "VariableID:2:51",
+      "name": "space/04"
+    },
+    "spacing/space/08": {
+      "id": "VariableID:2:52",
+      "name": "space/08"
+    },
+    "spacing/space/12": {
+      "id": "VariableID:2:53",
+      "name": "space/12"
+    },
+    "spacing/space/16": {
+      "id": "VariableID:2:54",
+      "name": "space/16"
+    },
+    "spacing/space/18": {
+      "id": "VariableID:2:55",
+      "name": "space/18"
+    },
+    "spacing/space/24": {
+      "id": "VariableID:2:56",
+      "name": "space/24"
+    },
+    "spacing/space/28": {
+      "id": "VariableID:2:57",
+      "name": "space/28"
+    },
+    "spacing/space/32": {
+      "id": "VariableID:2:58",
+      "name": "space/32"
+    },
+    "spacing/space/36": {
+      "id": "VariableID:2:59",
+      "name": "space/36"
+    },
+    "spacing/space/40": {
+      "id": "VariableID:2:60",
+      "name": "space/40"
+    },
+    "spacing/space/48": {
+      "id": "VariableID:2:61",
+      "name": "space/48"
+    },
+    "spacing/space/64": {
+      "id": "VariableID:2:62",
+      "name": "space/64"
+    },
+    "spacing/space/72": {
+      "id": "VariableID:2:63",
+      "name": "space/72"
+    },
+    "spacing/space/96": {
+      "id": "VariableID:2:64",
+      "name": "space/96"
+    },
+    "spacing/space/120": {
+      "id": "VariableID:2:65",
+      "name": "space/120"
+    },
+    "radius/radius/none": {
+      "id": "VariableID:2:66",
+      "name": "radius/none"
+    },
+    "radius/radius/field": {
+      "id": "VariableID:2:67",
+      "name": "radius/field"
+    },
+    "radius/radius/control": {
+      "id": "VariableID:2:68",
+      "name": "radius/control"
+    },
+    "radius/radius/full": {
+      "id": "VariableID:2:69",
+      "name": "radius/full"
+    },
+    "typography/family/display": {
+      "id": "VariableID:2:70",
+      "name": "family/display"
+    },
+    "typography/family/ui": {
+      "id": "VariableID:2:71",
+      "name": "family/ui"
+    },
+    "typography/family/mono": {
+      "id": "VariableID:2:72",
+      "name": "family/mono"
+    }
+  },
+  "styles": {
+    "text": {
+      "text-style/Display/Hero/Desktop": {
+        "id": "S:88fd4cfc6440013b5978abc50a0bcc627ccaa7f6,",
+        "name": "Display/Hero/Desktop"
+      },
+      "text-style/Display/Hero/Wide": {
+        "id": "S:34c3fe95fcc42e030cbd3b5aef78fa98e22d3182,",
+        "name": "Display/Hero/Wide"
+      },
+      "text-style/Display/Hero/Mobile": {
+        "id": "S:d9a3b3d3b6960ad3e025c8eab9db4bd2e0660f8f,",
+        "name": "Display/Hero/Mobile"
+      },
+      "text-style/Display/Section/Desktop": {
+        "id": "S:52b17e1554e4fad6f256fdae46f13b98256ccfa6,",
+        "name": "Display/Section/Desktop"
+      },
+      "text-style/Display/Section/Mobile": {
+        "id": "S:482ffaeb61bba593fcd6349603c6e718ef4fad1a,",
+        "name": "Display/Section/Mobile"
+      },
+      "text-style/Display/Case/Desktop": {
+        "id": "S:e1939bc44303c12971cf3d14d7fd35f20cab7e84,",
+        "name": "Display/Case/Desktop"
+      },
+      "text-style/Display/Case/Mobile": {
+        "id": "S:cc46f3527d617c7e2486d9eb4ff58e54bb768ab6,",
+        "name": "Display/Case/Mobile"
+      },
+      "text-style/Display/Thesis": {
+        "id": "S:bd8adb0ab293933a7ff329b69509052e113cb6a5,",
+        "name": "Display/Thesis"
+      },
+      "text-style/Display/Quote": {
+        "id": "S:5c663b8556982614b01a8fe59419e4d3c7dea6dd,",
+        "name": "Display/Quote"
+      },
+      "text-style/Display/Card": {
+        "id": "S:ac80a20572a1458715ff200a5c995ddef72fad36,",
+        "name": "Display/Card"
+      },
+      "text-style/Display/Caption": {
+        "id": "S:6fea06a06ed0036003a437698ff09aa802d782f9,",
+        "name": "Display/Caption"
+      },
+      "text-style/Display/Editorial Italic": {
+        "id": "S:19de61f2cc21cfb99c6254bc9917d4c74426dfa9,",
+        "name": "Display/Editorial Italic"
+      },
+      "text-style/Body/Large": {
+        "id": "S:3edc287a7fdb0842b49aabac5311c51a1d9f562a,",
+        "name": "Body/Large"
+      },
+      "text-style/Body/Default": {
+        "id": "S:7b0ebcc4fccf538bd5eb34794bfc07af356766a2,",
+        "name": "Body/Default"
+      },
+      "text-style/Body/Small": {
+        "id": "S:a049ab44fe69c66e8c430311f18cba28965dbaa3,",
+        "name": "Body/Small"
+      },
+      "text-style/UI/Brand": {
+        "id": "S:f1534439075769cbb62ada88730cca0cf147458f,",
+        "name": "UI/Brand"
+      },
+      "text-style/UI/Button": {
+        "id": "S:72ffdc05b38dfab0342fc8284ef4c2bb14ecfef8,",
+        "name": "UI/Button"
+      },
+      "text-style/UI/Label": {
+        "id": "S:cb0830a4d3058b8b146f77ff12eba7909e8664ee,",
+        "name": "UI/Label"
+      },
+      "text-style/Data/Folio": {
+        "id": "S:9c9dba8e0e7b1360bcdb3eb50cdd58f06850aeb3,",
+        "name": "Data/Folio"
+      },
+      "text-style/Data/Micro": {
+        "id": "S:37227e18c39b3195add85f77438218df7dd2f6a8,",
+        "name": "Data/Micro"
+      }
+    },
+    "effect": {
+      "effect-style/Shadow/Field Note": {
+        "id": "S:416328857ea5ea92f2eeb4da05ce6d9ccf2aa031,",
+        "name": "Shadow/Field Note"
+      },
+      "effect-style/Shadow/Artifact": {
+        "id": "S:1f519033fb2091b19f5dd93c1482f7b70a79f635,",
+        "name": "Shadow/Artifact"
+      },
+      "effect-style/Shadow/Product": {
+        "id": "S:6fc3ce154b95da82dcbd2432f4ddc41b4e9fedce,",
+        "name": "Shadow/Product"
+      },
+      "effect-style/Shadow/Overlay": {
+        "id": "S:300ec8ad5c8bda9d17de476923d3baf2783d279a,",
+        "name": "Shadow/Overlay"
+      }
+    }
+  },
+  "pages": {
+    "cover": {
+      "id": "0:1",
+      "frameId": "4:17"
+    },
+    "getting-started": {
+      "id": "4:2",
+      "frameId": "7:2"
+    },
+    "foundations": {
+      "id": "4:3",
+      "frameId": "8:2"
+    },
+    "components/editorial-button": {
+      "id": "4:5",
+      "boardId": "9:2"
+    },
+    "components/section-folio": {
+      "id": "4:6",
+      "boardId": "13:2"
+    },
+    "components/availability-mark": {
+      "id": "4:7",
+      "boardId": "14:2"
+    },
+    "components/practice-header": {
+      "id": "4:8",
+      "boardId": "15:2"
+    },
+    "components/product-artifact": {
+      "id": "4:9",
+      "boardId": "16:2"
+    },
+    "components/field-note": {
+      "id": "4:10",
+      "boardId": "17:2"
+    },
+    "components/case-study": {
+      "id": "4:11",
+      "boardId": "18:2",
+      "mobileBoardId": "41:108"
+    },
+    "components/method-row": {
+      "id": "4:12",
+      "boardId": "22:2",
+      "mobileBoardId": "42:26"
+    },
+    "screens/homepage": {
+      "id": "4:14"
+    },
+    "screens/mobile": {
+      "id": "4:15"
+    },
+    "utilities": {
+      "id": "4:16"
+    }
+  },
+  "components": {
+    "editorial-button": {
+      "setId": "10:2",
+      "variantCount": 16
+    },
+    "section-folio": {
+      "setId": "13:27",
+      "variantIds": [
+        "13:19",
+        "13:23"
+      ]
+    },
+    "availability-mark": {
+      "setId": "14:32",
+      "variantIds": [
+        "14:17",
+        "14:22",
+        "14:27"
+      ]
+    },
+    "practice-header": {
+      "setId": "15:68",
+      "desktopId": "15:25",
+      "mobileId": "15:51"
+    },
+    "product-artifact": {
+      "setId": "16:165",
+      "orbitId": "16:23",
+      "buildForgeId": "16:77",
+      "gambaTimeId": "16:120"
+    },
+    "field-note": {
+      "setId": "17:142",
+      "featureId": "17:21",
+      "compactId": "17:84"
+    },
+    "case-study": {
+      "setId": "21:108",
+      "visualRightId": "18:21",
+      "visualLeftId": "18:93",
+      "mobileId": "41:113"
+    },
+    "method-row": {
+      "setId": "23:2",
+      "defaultId": "22:19",
+      "finalId": "22:26",
+      "mobileSetId": "42:45",
+      "mobileDefaultId": "42:31",
+      "mobileFinalId": "42:38"
+    }
+  },
+  "screens": {
+    "homepage/desktop": {
+      "id": "31:2",
+      "width": 1920,
+      "height": 7800,
+      "textNodeCount": 265,
+      "instanceCount": 24,
+      "tokenBoundNodeCount": 417
+    },
+    "homepage/mobile": {
+      "id": "43:2",
+      "width": 390,
+      "height": 8280,
+      "textNodeCount": 219,
+      "instanceCount": 21,
+      "tokenBoundNodeCount": 329
+    }
+  },
+  "verification": {
+    "status": "pass",
+    "missingFonts": 0,
+    "unexpectedFontFamilies": 0,
+    "textOverflowSuspects": 0,
+    "viewportBoundsViolations": 0,
+    "unboundTextNodes": 0,
+    "contrastRatios": {
+      "primaryOnCanvas": 15.87,
+      "secondaryOnCanvas": 10.94,
+      "mutedOnCanvas": 7.01,
+      "faintOnCanvas": 5.36,
+      "accentOnCanvas": 6.65
+    },
+    "temporaryCaptureNodesRemoved": [
+      "24:2",
+      "26:2",
+      "39:2"
+    ]
+  },
+  "lastVerifiedAt": "2026-07-15T22:51:34.2299595Z"
+}
