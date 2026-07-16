@@ -1,6 +1,6 @@
 # BuildKit — Premium Field Journal
 
-This is the selected Field Journal direction developed into a dedicated, responsive homepage prototype. It is intentionally isolated from the production Next.js application until the direction is approved.
+This is the selected Field Journal direction developed into a dedicated, responsive homepage system. The approved design is now integrated into the production Next.js application.
 
 ## Figma source
 
@@ -49,6 +49,14 @@ The premium signal comes from editorial composition, generous scale, restrained 
 - Mobile retains the editorial hierarchy; it does not simply turn desktop cards into a vertical pile.
 - Informational body text stays at or above 14px on mobile; microcopy is reserved for labels and provenance.
 
-## Production gate
+## Production integration
 
-After direction approval, translate the system into the production Next.js homepage, navigation, footer, and shared tokens. Preserve existing `/deals`, `/go`, `/book`, services, and contact behavior during the migration.
+The design was approved and promoted into production on July 15, 2026.
+
+- Homepage composition: `src/app/page.tsx`
+- Shared navigation and footer: `src/components/Navigation.tsx` and `src/components/Footer.tsx`
+- Typography and metadata: `src/app/layout.tsx`
+- Shared Field Journal visual system: `site.css`, imported by the root layout
+- Shared Tailwind tokens: `tailwind.config.ts`
+
+Existing `/deals`, `/go`, `/book`, `/services`, `/projects`, `/websites`, and `/contact` routes remain intact.

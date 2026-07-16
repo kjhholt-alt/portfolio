@@ -1,40 +1,43 @@
 import type { Metadata } from "next";
-import { Syne, Outfit, JetBrains_Mono } from "next/font/google";
+import { IBM_Plex_Mono, Instrument_Sans, Newsreader } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/ThemeProvider";
+import "../../design/field-journal-premium/site.css";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/react";
 
-const syne = Syne({
+const newsreader = Newsreader({
   subsets: ["latin"],
-  variable: "--font-syne",
+  variable: "--font-newsreader",
   display: "swap",
 });
 
-const outfit = Outfit({
+const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
-  variable: "--font-outfit",
+  variable: "--font-instrument-sans",
   display: "swap",
 });
 
-const jetbrainsMono = JetBrains_Mono({
+const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"],
-  variable: "--font-mono",
+  variable: "--font-plex-mono",
+  weight: ["400", "500"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://buildkit.store"),
   title: {
-    default: "Kruz Holt — AI-Powered Solutions Developer",
+    default: "Kruz Holt — Independent Product Builder",
     template: "%s | Kruz Holt",
   },
   description:
-    "Full-stack developer specializing in AI-powered applications, custom web development, and scalable client websites. Next.js, TypeScript, React.",
+    "Independent product builder designing and shipping focused software, AI systems, and internal tools from first brief to real-world proof.",
   keywords: [
-    "AI developer",
-    "full-stack developer",
+    "independent product builder",
+    "product design",
+    "AI systems",
+    "full-stack development",
     "Next.js",
     "TypeScript",
     "React",
@@ -47,23 +50,23 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://buildkit.store",
     siteName: "Kruz Holt",
-    title: "Kruz Holt — AI-Powered Solutions Developer",
+    title: "Kruz Holt — Independent Product Builder",
     description:
-      "Full-stack developer specializing in AI-powered applications, custom web development, and scalable client websites.",
+      "Focused software, AI systems, and internal tools from first brief to real-world proof.",
     images: [
       {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Kruz Holt — Full-Stack Developer & AI Engineer",
+        alt: "Kruz Holt — Independent product builder",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kruz Holt — AI-Powered Solutions Developer",
+    title: "Kruz Holt — Independent Product Builder",
     description:
-      "Full-stack developer specializing in AI-powered applications, custom web development, and scalable client websites.",
+      "Focused software, AI systems, and internal tools from first brief to real-world proof.",
     images: ["/images/twitter-banner.png"],
   },
   robots: {
@@ -78,15 +81,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="dark" suppressHydrationWarning>
       <body
-        className={`${syne.variable} ${outfit.variable} ${jetbrainsMono.variable} font-body antialiased`}
+        className={`${newsreader.variable} ${instrumentSans.variable} ${ibmPlexMono.variable} font-body antialiased`}
       >
-        <ThemeProvider>
-          <Navigation />
-          <main className="min-h-screen">{children}</main>
-          <Footer />
-        </ThemeProvider>
+        <Navigation />
+        <main className="min-h-screen">{children}</main>
+        <Footer />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){if(navigator.doNotTrack==="1")return;fetch("https://admin.buildkit.store/api/collect",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({site:"portfolio",path:location.pathname}),keepalive:true}).catch(function(){})})();`,

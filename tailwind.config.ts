@@ -6,16 +6,16 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        display: ["var(--font-syne)", "system-ui", "sans-serif"],
-        body: ["var(--font-outfit)", "system-ui", "sans-serif"],
-        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
+        display: ["var(--font-newsreader)", "Georgia", "serif"],
+        body: ["var(--font-instrument-sans)", "system-ui", "sans-serif"],
+        mono: ["var(--font-plex-mono)", "ui-monospace", "monospace"],
       },
       colors: {
         accent: {
-          DEFAULT: "#e8a019",
-          light: "#f0be3c",
-          dark: "#c4850e",
-          muted: "rgba(232, 160, 25, 0.12)",
+          DEFAULT: "#aa9367",
+          light: "#c5ad7b",
+          dark: "#8f7a55",
+          muted: "rgba(170, 147, 103, 0.105)",
         },
         surface: {
           DEFAULT: "rgb(var(--surface) / <alpha-value>)",
