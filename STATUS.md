@@ -3,13 +3,25 @@
 
 ## Quick Status
 - **Project:** Developer Portfolio
-- **Current session:** 6 (GambaTime Deals Hub first-dollar funnel)
-- **Last updated:** 2026-07-09
+- **Current session:** 7 (Field Journal homepage relaunch)
+- **Last updated:** 2026-07-18
 - **Overall health:** 🟢 DEPLOYED & LIVE — https://buildkit.store
 
 ---
 
 ## What's Working
+
+**Homepage design relaunched 2026-07-15 — "Field Journal" system supersedes the
+amber/gold theme below.** New palette (ink paper `#0a0b09`, aged brass
+`#aa9367`, quiet sage `#879587`) and new type system (Newsreader display +
+Instrument Sans interface + IBM Plex Mono folios/measurements), replacing
+Syne/Outfit/JetBrains Mono. Full thesis + Figma source in
+`design/field-journal-premium/README.md`. `Navigation.tsx` and `Footer.tsx`
+were rebuilt for the new system; `page.tsx` is a 509-line rewrite. The
+dark/light toggle, theme-system bullets, and accent-color bullet below are
+**stale** — homepage is now single dark editorial theme, not a light/dark
+amber toggle.
+
 - Homepage with hero section (animated name, tagline, CTA buttons, scroll indicator)
 - About blurb section with gradient text
 - Featured projects grid (6 cards, auto-pulled from data file) — **UPDATED 2026-02-13**
@@ -24,18 +36,18 @@
 - Sidebar with availability indicator (green pulse dot), GitHub link, email link
 - Sticky navigation with scroll-aware background blur, spring-animated active indicator
 - Mobile hamburger menu with AnimatePresence transitions
-- Dark/light theme toggle (next-themes, dark default, animated sun/moon icons)
+- Dark/light theme toggle (next-themes, dark default, animated sun/moon icons) — **superseded, see relaunch note above**
 - Footer with GitHub, email links, copyright
 - Scroll-triggered animations (framer-motion useInView, fade-up, stagger)
 - Dot-grid background pattern
-- Custom accent color system (warm amber/gold #e8a019)
+- Custom accent color system (warm amber/gold #e8a019) — **superseded, see relaunch note above**
 - Per-page SEO metadata via route layouts
 - OpenGraph and Twitter card meta tags
 - Custom scrollbar styling
 - `/book` page for direct-sales batch-1 follow-ups — **NEW 2026-04-08**
 - `/go/<slug>` redirects for GambaTime deal links (Instant Gaming affiliate wired) — **NEW 2026-05-08**
 - `/deals` mobile-first GambaTime game discovery hub with eight curated titles, search, category filters, and disclosed affiliate CTAs — **NEW 2026-07-09**
-- Affiliate redirect attribution persists `/go/click/<slug>?src=...` events without delaying the buyer — **NEW 2026-07-09**
+- Affiliate redirect attribution persists `/go/click/<slug>?src=...` events without delaying the buyer — **NEW 2026-07-09, extended 2026-07-09 evening** (referral-source attribution added same day)
 - GambaTime's public YouTube About description now links to `/go/deals` with an affiliate disclosure — **LIVE 2026-07-09**
 - BuildForge (PoE2) surfaced on hub — **NEW 2026-05-08**
 - Portfolio health status emitter (CLI hook integration) — **NEW 2026-05-16**
@@ -56,6 +68,22 @@
 ---
 
 ## Last Session Summary
+**Date:** 2026-07-15 (gl-0498 STATUS.md regeneration sweep, 2026-07-18)
+**Goal:** (reconstructed from commits — no session summary was written at the time) redesign the homepage
+**What got done:**
+- Two design-direction studies (`9401144` proof-first, `43f2de9` premium field journal) converged on the Field Journal direction
+- Shipped the Figma system for it (`44575a3`) — see `design/field-journal-premium/README.md` for the Figma link, palette, and type system
+- Rewrote the homepage (`src/app/page.tsx`, 509-line diff), navigation, footer, layout metadata, and Tailwind tokens to the new system (`613a6d8`)
+- New palette: ink paper / raised paper / warm ink / aged brass / quiet sage. New type: Newsreader + Instrument Sans + IBM Plex Mono
+
+**Verification (this sweep, 2026-07-18):**
+- `npm run build` — pass, 11/11 static pages generated, no errors
+- Working tree clean, local master in sync with origin/master
+
+**Note:** this was Kruz's own commit (`613a6d8`, author `Kruz Holt`), not an agent session — no STATUS.md update was made at the time, which is why this entry is being backfilled now, 3 days late.
+
+---
+
 **Date:** 2026-07-09
 **Goal:** Put one first-dollar revenue funnel in production using an audience and affiliate account that already exist
 **What got done:**
@@ -157,3 +185,5 @@
 | 3 | 2026-02-14 | Deployment verified | ✅ | Live at buildkit.store (custom domain), STATUS.md updated |
 | 4 | 2026-03-04 | Websites page + contact form + deploy | ✅ | New /websites sales page (3 packages), contact form via FormSubmit.co, nav updated, redeployed to Vercel |
 | 5 | 2026-07-03 | Refresh stale STATUS.md sync | ✅ | /book page, /go/<slug> redirects wired for Instant Gaming affiliate, BuildForge surfaced, status emitter added, verified build passing |
+| 6 | 2026-07-09 | GambaTime Deals Hub first-dollar funnel | ✅ | /deals hub shipped, /go redirects repointed to it, click attribution added, published to YouTube About + disclosure |
+| 7 | 2026-07-15 | Field Journal homepage relaunch | ✅ | Backfilled 2026-07-18 (gl-0498) — no STATUS.md update was made at the time. New palette/type system shipped to production; build verified clean this pass |
